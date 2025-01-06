@@ -22,8 +22,6 @@ param(
     [string]$HostName=$env:COMPUTERNAME # 主机名称
 )
 
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
-
 # 检查是否有管理员权限
 function Check-IsElevated {
     $id = [System.Security.Principal.WindowsIdentity]::GetCurrent()
